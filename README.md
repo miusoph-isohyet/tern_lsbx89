@@ -12,8 +12,6 @@ this is a port of original python interpreter by User:None1
 
 Ensure you have Rust and Cargo installed on your system. If not, you can install them from [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install).
 
-### Build
-
 Clone the repository and navigate to the project directory:
 
 ```bash
