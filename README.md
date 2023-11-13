@@ -26,9 +26,9 @@ Replace `<filename>` with the path to the image file containing the TernLSB prog
 
 To encode a Brainfuck program into an image file for TernLSB, use:
 
-`cargo run <inputfn> <brainfuckfn> <outputfn>`
+`python ternlsb.py <inputfn> <brainfuckfn> <outputfn>`
 
 Replace `<inputfn>` with the image file, `<brainfuckfn>` with the path to the Brainfuck program file, and `<outputfn>` with the desired output image file.
 
 
-currently encoding only works in original python with the imaging library, but the rust interpreter does seem to run the original TernLSB files
+currently encoding only works in original python with the imaging library, but the rust interpreter does run TernLSB files
