@@ -1,6 +1,5 @@
 use std::env;
 use std::io::{self, Read};
-use std::path::Path;
 
 extern crate image;
 
@@ -67,42 +66,11 @@ fn run(filename: &str) {
     bf(&b);
 }
 
-fn encode(filename: &str, brainfuck: &str, output: &str) {
-    let img = image::open(filename).unwrap();
-    let fuck = "+-,.<>[]";
-    let mut bytes = img.clone().into_bytes().to_vec();
-    let mut w = String::new();
-
-    for ch in brainfuck.chars() {
-        if let Some(_) = fuck.chars().position(|x| x == ch) {
-            w.push(ch);
-        }
-    }
-
-    for (i, j) in w.chars().enumerate() {
-        bytes[i] = bytes[i].wrapping_div(9).wrapping_mul(9);
-        bytes[i] = bytes[i].wrapping_add(fuck.chars().position(|x| x == j).unwrap() as u8);
-        if bytes[i] >= 9 {
-            bytes[i] = bytes[i].wrapping_sub(9);
-        }
-    }
-
-    bytes[w.len()] = bytes[w.len()].wrapping_div(9).wrapping_mul(9).wrapping_add(8);
-    if bytes[w.len()] >= 9 {
-        bytes[w.len()] = bytes[w.len()].wrapping_sub(9);
-    }
-
-    let img_bytes = bytes.into_boxed_slice();
-    image::save_buffer(Path::new(output), &img_bytes, img.width(), img.height(), image::ColorType::L8).unwrap();
-}
-
 fn main() {
     let args: Vec<String> = env::args().collect();
     if args.len() == 2 {
         run(&args[1]);
-    } else if args.len() == 4 {
-        encode(&args[1], &std::fs::read_to_string(&args[2]).unwrap(), &args[3]);
     } else {
-        println!("Must pass 1 or 3 arguments");
+        println!("input file as arg");
     }
 }
