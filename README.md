@@ -1,5 +1,4 @@
 
-```markdown
 # TernLSB
 
 TernLSB is an esoteric programming language that uses steganography to store its programs within images.
