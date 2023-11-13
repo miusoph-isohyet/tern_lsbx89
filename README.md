@@ -12,13 +12,6 @@ this is a port of original python interpreter by User:None1
 
 Ensure you have Rust and Cargo installed on your system. If not, you can install them from [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install).
 
-Clone the repository and navigate to the project directory:
-
-```bash
-git clone https://github.com/yourusername/ternLSB-rs.git
-cd ternLSB-rs
-```
-
 ### Usage
 
 #### Run TernLSB Program
