@@ -1,5 +1,5 @@
 [package]
-name = "ternLSBrs"
+name = "tern_lsbrs"
 version = "0.1.0"
 edition = "2021"
 
