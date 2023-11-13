@@ -2,6 +2,9 @@
 # TernLSB
 
 TernLSB is an esoteric programming language that uses steganography to store its programs within images.
+https://esolangs.org/wiki/TernLSB
+
+this is a port of original python interpreter by User:None1
 
 ## How to Run
 
