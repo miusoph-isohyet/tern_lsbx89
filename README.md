@@ -18,12 +18,6 @@ git clone https://github.com/yourusername/ternLSB-rs.git
 cd ternLSB-rs
 ```
 
-Build the project:
-
-```bash
-cargo build --release
-```
-
 ### Usage
 
 #### Run TernLSB Program
@@ -31,7 +25,7 @@ cargo build --release
 To interpret a TernLSB program from an image file, use:
 
 ```bash
-cargo run --release -- <filename>
+cargo run <filename>
 ```
 
 Replace `<filename>` with the path to the image file containing the TernLSB program.
@@ -41,25 +35,8 @@ Replace `<filename>` with the path to the image file containing the TernLSB prog
 To encode a Brainfuck program into an image file for TernLSB, use:
 
 ```bash
-cargo run --release -- <inputfn> <brainfuckfn> <outputfn>
+cargo run <inputfn> <brainfuckfn> <outputfn>
 ```
 
 Replace `<inputfn>` with the image file, `<brainfuckfn>` with the path to the Brainfuck program file, and `<outputfn>` with the desired output image file.
 
-### Examples
-
-#### Interpret TernLSB Program
-
-```bash
-cargo run --release -- examples/hello_world.png
-```
-
-#### Encode Brainfuck Program
-
-```bash
-cargo run --release -- examples/input_image.png examples/brainfuck_program.bf examples/output_image.png
-```
-
-### Notes
-
-- TernLSB programs must be stored in a lossless compressed or uncompressed image type that uses RGB or RGBA color types (e.g., BMP and PNG).
