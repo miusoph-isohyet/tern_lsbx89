@@ -24,9 +24,7 @@ cd ternLSB-rs
 
 To interpret a TernLSB program from an image file, use:
 
-```bash
-cargo run <filename>
-```
+`cargo run <filename>`
 
 Replace `<filename>` with the path to the image file containing the TernLSB program.
 
@@ -34,9 +32,7 @@ Replace `<filename>` with the path to the image file containing the TernLSB prog
 
 To encode a Brainfuck program into an image file for TernLSB, use:
 
-```bash
-cargo run <inputfn> <brainfuckfn> <outputfn>
-```
+`cargo run <inputfn> <brainfuckfn> <outputfn>`
 
 Replace `<inputfn>` with the image file, `<brainfuckfn>` with the path to the Brainfuck program file, and `<outputfn>` with the desired output image file.
 
