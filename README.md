@@ -1,3 +1,6 @@
+# tlsbx89.py
+
+different thing its pretty cool -. prints X, -.>+<+++---.<<-. prints XXX
 
 # TernLSB
 
