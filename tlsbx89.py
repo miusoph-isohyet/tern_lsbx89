@@ -7,7 +7,7 @@ def bf(code):
     s1=[]
     s2=[]
     matches={}
-    tape=[0]*1000000
+    tape=[0]*101054970
     for i,j in enumerate(code):
         if j=='[':
             s1.append(i)
@@ -19,11 +19,11 @@ def bf(code):
     p=0
     while cp<len(code):
         if code[cp]=='+':
-            tape[p]=(tape[p]+1)%256
+            tape[p]=(tape[p]+1)%89
         if code[cp]=='-':
-            tape[p]=(tape[p]-1)%256
+            tape[p]=(tape[p]-1)%89
         if code[cp]==',':
-            tape[p]=ord(sys.stdin.read(1))%256
+            tape[p]=ord(sys.stdin.read(1))%89
         if code[cp]=='.':
             print(chr(tape[p]),end='')
         if code[cp]=='<':
@@ -61,11 +61,11 @@ def enc(fn,b,o):
         d[i]=d[i]//9
         d[i]=d[i]*9
         d[i]+=fuck.index(j)
-        if d[i]>=256:
+        if d[i]>=89:
             d[i]-=9
     d[len(w)]=d[len(w)]//9*9+8
-    if d[len(w)]>=256:
-        d[len(w)]-=9
+    if d[len(w)]>=89:
+        d[len(w)]-=8
     db=bytes(d)
     Image.frombytes(im.mode,im.size,db).save(o)
     
